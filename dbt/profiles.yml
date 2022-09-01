@@ -9,3 +9,4 @@ bigquery:
       threads: 1
       keyfile: /tmp/bigquery/keyfile.json
       location: EU
+      priority: interactive
