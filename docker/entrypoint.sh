@@ -64,5 +64,6 @@ mv -f "${DBT_DOCS_DIR}/target/catalog.json" "/usr/app/${FOLDER}/docs"
 git config user.email "you@example.com"
 git config user.name "dbt-bigquery-cloud-run"
 message="Commit by dbt-bigquery-cloud-run"
+git add -A
 git commit -a -m "${message}"
 git push
