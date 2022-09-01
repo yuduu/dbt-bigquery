@@ -51,7 +51,7 @@ cd "${DBT_PROFILES_DIR}"
 
 # running dbt
 
-dbt run --project-dir "${DBT_PROFILES_DIR}/${DBT_PROJECT}" --profiles-dir
+dbt run --project-dir "${DBT_PROFILES_DIR}/${DBT_PROJECT}" --profiles-dir "${DBT_PROFILES_DIR}"
 
 
 # Synching to GitHub and creating Documentation

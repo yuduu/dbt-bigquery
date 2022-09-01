@@ -1,7 +1,7 @@
 bigquery:
-  target: default
+  target: "{{ env_var('DBT_TARGET', 'default') }}"
   outputs:
-    default:
+    "{{ env_var('DBT_TARGET', 'default') }}":
       type: bigquery
       method: service-account
       project: "{{ env_var('GCP_PROJECT_ID') }}"
