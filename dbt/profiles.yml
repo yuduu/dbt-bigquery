@@ -1,0 +1,11 @@
+bigquery:
+  target: "{{ env_var('DBT_TARGET', 'default') }}"
+  outputs:
+    "{{ env_var('DBT_TARGET', 'default') }}":
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: "{{ env_var('DBT_DATASET') }}"
+      threads: "{{ env_var('DBT_THREADS', '1') }}"
+      keyfile: [/tmp/bigquery/keyfile.json]
+      <optional_config>: <value>
