@@ -8,4 +8,4 @@ bigquery:
       dataset: "{{ env_var('DBT_DATASET') }}"
       threads: 1
       keyfile: /tmp/bigquery/keyfile.json
-      <optional_config>: <value>
+      location: EU
