@@ -1,3 +1,9 @@
+# Building
+```bash
+cd docker
+docker build -t yuduu/dbt-bigquery --rm .
+```
+
 # Example Usage
 ```bash
 #! /bin/bash

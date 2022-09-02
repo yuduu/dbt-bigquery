@@ -47,13 +47,15 @@ RUN python -m pip install \
     -Iv --no-cache-dir \
     dbt-bigquery==1.2.0
 
+COPY entrypoint.sh ${HOME}
+
 # Change entry workdir
 
-WORKDIR "/usr/app/${FOLDER}"
-#VOLUME /usr/app/${FOLDER}
+# WORKDIR "/usr/app/${FOLDER}"
+# VOLUME /usr/app/${FOLDER}
 # Volume for GitHub.com SSH Repo Key (private)
 VOLUME /tmp/.ssh
 VOLUME /tmp/bigquery
-CMD ["sh", "-c"]
+ENTRYPOINT ["${HOME}/entrypoint.sh"]
 
 
