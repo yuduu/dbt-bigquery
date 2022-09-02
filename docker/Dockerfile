@@ -37,17 +37,19 @@ FROM base as dbt-bigquery
 
 # Change User
 USER dbt
-ENV PATH="${HOME}/.local/bin:${PATH}"
+ENV PATH="/home/dbt/.local/bin:${PATH}"
 WORKDIR /usr/app/
+COPY --chown=dbt:dbt ./entrypoint.sh .
 # Install Bigquery
 RUN python -m pip install \
     --upgrade pip setuptools wheel \
     --no-cache-dir \
   && python -m pip install \
     -Iv --no-cache-dir \
-    dbt-bigquery==1.2.0
+    dbt-bigquery==1.2.0 \
+  && chmod 0775 ./entrypoint.sh
 
-COPY entrypoint.sh ${HOME}
+
 
 # Change entry workdir
 
@@ -56,6 +58,6 @@ COPY entrypoint.sh ${HOME}
 # Volume for GitHub.com SSH Repo Key (private)
 VOLUME /tmp/.ssh
 VOLUME /tmp/bigquery
-ENTRYPOINT ["${HOME}/entrypoint.sh"]
+ENTRYPOINT ["/usr/app/entrypoint.sh"]
 
 
