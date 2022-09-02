@@ -13,9 +13,6 @@ if [ -z ${DBT_DATASET} ];
     then echo "ERROR: DBT_DATASET is not set.";
     exit 1; 
 fi
-if [ -z ${DBT_THREADS} ]; 
-    then echo "INFO: DBT_THREADS is not set. Using Default 1";
-fi
 if [ -z ${DBT_PROJECT} ]; 
     then echo "ERROR: DBT_PROJECT is not set.";
     exit 1; 
