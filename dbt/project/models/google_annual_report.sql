@@ -55,4 +55,3 @@ UNION ALL
                AND industry IS NULL)
          )
  )
-;
