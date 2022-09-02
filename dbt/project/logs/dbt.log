@@ -1,0 +1,181 @@
+
+
+============================== 2022-09-02 07:49:08.815252 | 7124519f-6d27-4d30-aa92-872e18988af1 ==============================
+[0m07:49:08.815265 [info ] [MainThread]: Running with dbt=1.2.1
+[0m07:49:08.815492 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/app/dbt-bigquery/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/app/dbt-bigquery/dbt/project', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m07:49:08.815580 [debug] [MainThread]: Tracking: tracking
+[0m07:49:08.817203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5ed185b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5ed186a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5ed18790>]}
+[0m07:49:08.829317 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+[0m07:49:08.829523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7124519f-6d27-4d30-aa92-872e18988af1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5ed1ad70>]}
+[0m07:49:08.838293 [debug] [MainThread]: Parsing macros/etc.sql
+[0m07:49:08.839935 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m07:49:08.858105 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m07:49:08.862703 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m07:49:08.864587 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+[0m07:49:08.866660 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m07:49:08.867782 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m07:49:08.880409 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m07:49:08.884496 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m07:49:08.887406 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m07:49:08.889344 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m07:49:08.890049 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m07:49:08.891027 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m07:49:08.891941 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m07:49:08.892347 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m07:49:08.892627 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m07:49:08.893037 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m07:49:08.893397 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m07:49:08.893820 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m07:49:08.894186 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m07:49:08.894570 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m07:49:08.894792 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m07:49:08.895008 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m07:49:08.895355 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m07:49:08.903328 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m07:49:08.918280 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m07:49:08.921855 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m07:49:08.924350 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m07:49:08.937120 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m07:49:08.939951 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m07:49:08.942264 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m07:49:08.949874 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m07:49:08.952923 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m07:49:08.954665 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m07:49:08.956320 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m07:49:08.965121 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m07:49:08.968562 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m07:49:08.969121 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m07:49:08.969696 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m07:49:08.970311 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m07:49:08.971299 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m07:49:08.972948 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m07:49:08.975771 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m07:49:08.977141 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m07:49:08.978527 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m07:49:08.981921 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m07:49:08.994980 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m07:49:09.000045 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m07:49:09.001309 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m07:49:09.009898 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m07:49:09.022011 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m07:49:09.030959 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m07:49:09.042027 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m07:49:09.053566 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m07:49:09.060471 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m07:49:09.061543 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m07:49:09.064719 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m07:49:09.067185 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m07:49:09.068086 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m07:49:09.071959 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m07:49:09.073695 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m07:49:09.075723 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m07:49:09.079760 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m07:49:09.081371 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m07:49:09.082804 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m07:49:09.083464 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m07:49:09.084326 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m07:49:09.085036 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m07:49:09.085678 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m07:49:09.086337 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m07:49:09.087187 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m07:49:09.088009 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m07:49:09.089260 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m07:49:09.089883 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m07:49:09.090542 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m07:49:09.091276 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m07:49:09.091963 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m07:49:09.092686 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m07:49:09.093675 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m07:49:09.094386 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m07:49:09.098438 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m07:49:09.098985 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m07:49:09.099516 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m07:49:09.100255 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m07:49:09.283959 [debug] [MainThread]: 1699: static parser successfully parsed customers.sql
+[0m07:49:09.316079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7124519f-6d27-4d30-aa92-872e18988af1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5eb419c0>]}
+[0m07:49:09.320645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7124519f-6d27-4d30-aa92-872e18988af1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5ed1a6e0>]}
+[0m07:49:09.320868 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 285 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m07:49:09.321012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7124519f-6d27-4d30-aa92-872e18988af1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e60705930>]}
+[0m07:49:09.321829 [info ] [MainThread]: 
+[0m07:49:09.322238 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m07:49:09.323003 [debug] [ThreadPool]: Acquiring new bigquery connection "list_bt-pp-cus-c84f}"
+[0m07:49:09.323160 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:49:09.828899 [debug] [ThreadPool]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest("GET https://bigquery.googleapis.com/bigquery/v2/projects/bt-pp-cus-c84f%7D/datasets?maxResults=10000&prettyPrint=false: Invalid project ID 'bt-pp-cus-c84f}'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.")
+[0m07:49:10.932586 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:49:10.933059 [debug] [MainThread]: Connection 'list_bt-pp-cus-c84f}' was properly closed.
+[0m07:49:10.933511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5eb7e2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5eb7d960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e5eb666e0>]}
+[0m07:49:10.933936 [debug] [MainThread]: Flushing usage events
+[0m07:49:11.417938 [error] [MainThread]: Encountered an error:
+Database Error
+  Invalid project ID 'bt-pp-cus-c84f}'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+[0m07:49:11.420221 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py", line 194, in exception_handler
+    yield
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py", line 611, in _retry_and_handle
+    return retry.retry_target(
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/impl.py", line 186, in query_schemas
+    return [ds.dataset_id for ds in all_datasets]
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/impl.py", line 186, in <listcomp>
+    return [ds.dataset_id for ds in all_datasets]
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/api_core/page_iterator.py", line 208, in _items_iter
+    for page in self._page_iter(increment=False):
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/api_core/page_iterator.py", line 244, in _page_iter
+    page = self._next_page()
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/api_core/page_iterator.py", line 373, in _next_page
+    response = self._get_next_page_response()
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/api_core/page_iterator.py", line 432, in _get_next_page_response
+    return self.api_request(
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/cloud/bigquery/client.py", line 440, in api_request
+    return self._call_api(
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/cloud/bigquery/client.py", line 782, in _call_api
+    return call()
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/api_core/retry.py", line 283, in retry_wrapped_func
+    return retry_target(
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/dbt/.local/lib/python3.10/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 GET https://bigquery.googleapis.com/bigquery/v2/projects/bt-pp-cus-c84f%7D/datasets?maxResults=10000&prettyPrint=false: Invalid project ID 'bt-pp-cus-c84f}'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/main.py", line 129, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/main.py", line 191, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/main.py", line 238, in run_from_args
+    results = task.run()
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/task/runnable.py", line 470, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/task/runnable.py", line 432, in execute_with_hooks
+    self.before_run(adapter, selected_uids)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/task/run.py", line 442, in before_run
+    self.create_schemas(adapter, required_schemas)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/task/runnable.py", line 555, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/utils.py", line 480, in connected
+    return func(*args, **kwargs)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/task/runnable.py", line 532, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/impl.py", line 188, in list_schemas
+    return self.connections._retry_and_handle(msg="list dataset", conn=conn, fn=query_schemas)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py", line 610, in _retry_and_handle
+    with self.exception_handler(msg):
+  File "/usr/local/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py", line 198, in exception_handler
+    self.handle_error(e, message)
+  File "/home/dbt/.local/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py", line 186, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error
+  Invalid project ID 'bt-pp-cus-c84f}'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+
