@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 # Check if ENV Variables Exist
 if [ -z ${GITPATH} ]; 

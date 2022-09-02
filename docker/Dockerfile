@@ -37,8 +37,7 @@ FROM base as dbt-bigquery
 
 # Change User
 USER dbt
-ENV HOME="/home/${USER}" \
-  PATH="${HOME}/.local/bin:${PATH}"
+ENV PATH="${HOME}/.local/bin:${PATH}"
 WORKDIR /usr/app/
 # Install Bigquery
 RUN python -m pip install \
