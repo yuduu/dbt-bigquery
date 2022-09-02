@@ -57,7 +57,7 @@ DBT_DOCS_DIR=${DBT_PROFILES_DIR}/${DBT_PROJECT}/target
 mkdir "/usr/app/${FOLDER}/docs/"
 cp -f "${DBT_DOCS_DIR}/index.html" "/usr/app/${FOLDER}/docs"
 cp -f "${DBT_DOCS_DIR}/manifest.json" "/usr/app/${FOLDER}/docs"
-cp -f "${DBT_DOCS_DIR}/target/catalog.json" "/usr/app/${FOLDER}/docs"
+cp -f "${DBT_DOCS_DIR}/catalog.json" "/usr/app/${FOLDER}/docs"
 
 git config user.email "you@example.com"
 git config user.name "dbt-bigquery-cloud-run"
