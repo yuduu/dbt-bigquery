@@ -2495,3 +2495,59 @@ select * from final;
 [0m14:47:28.570338 [debug] [MainThread]: Flushing usage events
 [0m14:47:29.029743 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
 [0m14:47:29.030210 [debug] [MainThread]: Connection 'bt-pp-cus-c84f.information_schema' was properly closed.
+
+
+============================== 2022-09-02 15:38:47.553904 | 8335b327-43bf-470b-84f3-722130e5126f ==============================
+[0m15:38:47.553913 [info ] [MainThread]: Running with dbt=1.2.1
+[0m15:38:47.554130 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/app/dbt-bigquery/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/app/dbt-bigquery/dbt/project', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m15:38:47.554214 [debug] [MainThread]: Tracking: tracking
+[0m15:38:47.555732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd991c5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd991c6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd991c790>]}
+[0m15:38:47.581519 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:38:47.581704 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:38:47.586263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8335b327-43bf-470b-84f3-722130e5126f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd977a7a0>]}
+[0m15:38:47.591733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8335b327-43bf-470b-84f3-722130e5126f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd96e3ee0>]}
+[0m15:38:47.591975 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 285 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m15:38:47.592157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8335b327-43bf-470b-84f3-722130e5126f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd9764040>]}
+[0m15:38:47.593106 [info ] [MainThread]: 
+[0m15:38:47.593587 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m15:38:47.594286 [debug] [ThreadPool]: Acquiring new bigquery connection "list_bt-pp-cus-c84f"
+[0m15:38:47.594463 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:38:48.074877 [debug] [ThreadPool]: Acquiring new bigquery connection "list_bt-pp-cus-c84f_dbtbigquerytest"
+[0m15:38:48.075556 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:38:48.454913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8335b327-43bf-470b-84f3-722130e5126f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd97bab00>]}
+[0m15:38:48.455730 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m15:38:48.456183 [info ] [MainThread]: 
+[0m15:38:48.473679 [debug] [Thread-1 (]: Began running node model.project.test
+[0m15:38:48.473974 [info ] [Thread-1 (]: 1 of 1 START view model dbtbigquerytest.test ................................... [RUN]
+[0m15:38:48.474330 [debug] [Thread-1 (]: Acquiring new bigquery connection "model.project.test"
+[0m15:38:48.474459 [debug] [Thread-1 (]: Began compiling node model.project.test
+[0m15:38:48.474540 [debug] [Thread-1 (]: Compiling model.project.test
+[0m15:38:48.476132 [debug] [Thread-1 (]: Writing injected SQL for node "model.project.test"
+[0m15:38:48.476323 [debug] [Thread-1 (]: finished collecting timing info
+[0m15:38:48.476404 [debug] [Thread-1 (]: Began executing node model.project.test
+[0m15:38:48.503572 [debug] [Thread-1 (]: Writing runtime SQL for node "model.project.test"
+[0m15:38:48.503995 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:38:48.505015 [debug] [Thread-1 (]: On model.project.test: /* {"app": "dbt", "dbt_version": "1.2.1", "profile_name": "bigquery", "target_name": "default", "node_id": "model.project.test"} */
+
+
+  create or replace view `bt-pp-cus-c84f`.`dbtbigquerytest`.`test`
+  OPTIONS()
+  as select 1 as num;
+
+
+[0m15:38:49.616405 [debug] [Thread-1 (]: finished collecting timing info
+[0m15:38:49.616828 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8335b327-43bf-470b-84f3-722130e5126f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd95c6bc0>]}
+[0m15:38:49.625840 [info ] [Thread-1 (]: 1 of 1 OK created view model dbtbigquerytest.test .............................. [[32mOK[0m in 1.14s]
+[0m15:38:49.626325 [debug] [Thread-1 (]: Finished running node model.project.test
+[0m15:38:49.627825 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m15:38:49.628083 [info ] [MainThread]: 
+[0m15:38:49.628355 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.03 seconds (2.03s).
+[0m15:38:49.628561 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:38:49.628674 [debug] [MainThread]: Connection 'list_bt-pp-cus-c84f_dbtbigquerytest' was properly closed.
+[0m15:38:49.628753 [debug] [MainThread]: Connection 'model.project.test' was properly closed.
+[0m15:38:49.634605 [info ] [MainThread]: 
+[0m15:38:49.634913 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:38:49.635188 [info ] [MainThread]: 
+[0m15:38:49.635360 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:38:49.635653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd96e3160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd96e3c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5dd991e3b0>]}
+[0m15:38:49.635976 [debug] [MainThread]: Flushing usage events
