@@ -54,9 +54,10 @@ dbt run --project-dir "${DBT_PROFILES_DIR}/${DBT_PROJECT}" --profiles-dir "${DBT
 # Synching to GitHub and creating Documentation
 dbt docs generate --project-dir "${DBT_PROFILES_DIR}/${DBT_PROJECT}" --no-compile
 DBT_DOCS_DIR=${DBT_PROFILES_DIR}/${DBT_PROJECT}/target
-mv -f "${DBT_DOCS_DIR}/index.html" "/usr/app/${FOLDER}/docs"
-mv -f "${DBT_DOCS_DIR}/manifest.json" "/usr/app/${FOLDER}/docs"
-mv -f "${DBT_DOCS_DIR}/target/catalog.json" "/usr/app/${FOLDER}/docs"
+mkdir ${DBT_DOCS_DIR}
+mv -f "${DBT_DOCS_DIR}/index.html" "/usr/app/${FOLDER}/docs/"
+mv -f "${DBT_DOCS_DIR}/manifest.json" "/usr/app/${FOLDER}/docs/"
+mv -f "${DBT_DOCS_DIR}/target/catalog.json" "/usr/app/${FOLDER}/docs/"
 
 git config user.email "you@example.com"
 git config user.name "dbt-bigquery-cloud-run"
