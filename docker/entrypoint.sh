@@ -55,7 +55,7 @@ dbt ${@} \
 
 # Synching to GitHub and creating Documentation
 
-if [ $0 == "run" ]; then
+if [ "$1" == "run" ]; then
     dbt docs generate --project-dir "${DBT_PROFILES_DIR}/${DBT_PROJECT}" --profiles-dir "${DBT_PROFILES_DIR}" --no-compile
     DBT_DOCS_DIR=${DBT_PROFILES_DIR}/${DBT_PROJECT}/target
     if [ ! -d "/usr/app/${FOLDER}/docs/" ]; then
