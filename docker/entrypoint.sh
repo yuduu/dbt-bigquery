@@ -54,14 +54,17 @@ dbt ${@} \
 
 
 # Synching to GitHub and creating Documentation
-dbt docs generate --project-dir "${DBT_PROFILES_DIR}/${DBT_PROJECT}" --profiles-dir "${DBT_PROFILES_DIR}" --no-compile
-DBT_DOCS_DIR=${DBT_PROFILES_DIR}/${DBT_PROJECT}/target
-if [ ! -d "/usr/app/${FOLDER}/docs/" ]; then
-  mkdir "/usr/app/${FOLDER}/docs/"
+
+if [ $0 == "run" ]; then
+    dbt docs generate --project-dir "${DBT_PROFILES_DIR}/${DBT_PROJECT}" --profiles-dir "${DBT_PROFILES_DIR}" --no-compile
+    DBT_DOCS_DIR=${DBT_PROFILES_DIR}/${DBT_PROJECT}/target
+    if [ ! -d "/usr/app/${FOLDER}/docs/" ]; then
+    mkdir "/usr/app/${FOLDER}/docs/"
+    fi
+    cp -f "${DBT_DOCS_DIR}/index.html" "/usr/app/${FOLDER}/docs"
+    cp -f "${DBT_DOCS_DIR}/manifest.json" "/usr/app/${FOLDER}/docs"
+    cp -f "${DBT_DOCS_DIR}/catalog.json" "/usr/app/${FOLDER}/docs"
 fi
-cp -f "${DBT_DOCS_DIR}/index.html" "/usr/app/${FOLDER}/docs"
-cp -f "${DBT_DOCS_DIR}/manifest.json" "/usr/app/${FOLDER}/docs"
-cp -f "${DBT_DOCS_DIR}/catalog.json" "/usr/app/${FOLDER}/docs"
 
 git config user.email "you@example.com"
 git config user.name "dbt-bigquery-cloud-run"
