@@ -1200,3 +1200,280 @@ select * from final;
 [0m08:36:22.972073 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
 [0m08:36:22.972419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23efcac340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23efcac3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23efb0bd90>]}
 [0m08:36:22.972633 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-09-02 09:45:30.106227 | 9be86c74-1b71-46c7-b0ce-eea36260fada ==============================
+[0m09:45:30.106237 [info ] [MainThread]: Running with dbt=1.2.1
+[0m09:45:30.106517 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/app/dbt-bigquery/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/app/dbt-bigquery/dbt/project', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m09:45:30.106603 [debug] [MainThread]: Tracking: tracking
+[0m09:45:30.108054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f6885b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f6886d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f688790>]}
+[0m09:45:30.133296 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m09:45:30.133565 [debug] [MainThread]: Partial parsing: added file: project://models/publications.sql
+[0m09:45:30.133694 [debug] [MainThread]: Partial parsing: deleted file: project://models/customers.sql
+[0m09:45:30.144473 [debug] [MainThread]: 1699: static parser successfully parsed publications.sql
+[0m09:45:30.161024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9be86c74-1b71-46c7-b0ce-eea36260fada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90e301d80>]}
+[0m09:45:30.165963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9be86c74-1b71-46c7-b0ce-eea36260fada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f453f40>]}
+[0m09:45:30.166266 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 285 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m09:45:30.166487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9be86c74-1b71-46c7-b0ce-eea36260fada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f4a9a20>]}
+[0m09:45:30.167375 [info ] [MainThread]: 
+[0m09:45:30.167826 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m09:45:30.168677 [debug] [ThreadPool]: Acquiring new bigquery connection "list_bt-pp-cus-c84f"
+[0m09:45:30.168871 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:45:30.706579 [debug] [ThreadPool]: Acquiring new bigquery connection "list_bt-pp-cus-c84f_dbtbigquerytest"
+[0m09:45:30.707081 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:45:31.079589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9be86c74-1b71-46c7-b0ce-eea36260fada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f51a620>]}
+[0m09:45:31.080585 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m09:45:31.081116 [info ] [MainThread]: 
+[0m09:45:31.099461 [debug] [Thread-1 (]: Began running node model.project.publications
+[0m09:45:31.099695 [info ] [Thread-1 (]: 1 of 1 START view model dbtbigquerytest.publications ........................... [RUN]
+[0m09:45:31.100058 [debug] [Thread-1 (]: Acquiring new bigquery connection "model.project.publications"
+[0m09:45:31.100188 [debug] [Thread-1 (]: Began compiling node model.project.publications
+[0m09:45:31.100268 [debug] [Thread-1 (]: Compiling model.project.publications
+[0m09:45:31.102853 [debug] [Thread-1 (]: Writing injected SQL for node "model.project.publications"
+[0m09:45:31.103044 [debug] [Thread-1 (]: finished collecting timing info
+[0m09:45:31.103127 [debug] [Thread-1 (]: Began executing node model.project.publications
+[0m09:45:31.129097 [debug] [Thread-1 (]: Writing runtime SQL for node "model.project.publications"
+[0m09:45:31.129478 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:45:31.130311 [debug] [Thread-1 (]: On model.project.publications: /* {"app": "dbt", "dbt_version": "1.2.1", "profile_name": "bigquery", "target_name": "default", "node_id": "model.project.publications"} */
+
+
+  create or replace view `bt-pp-cus-c84f`.`dbtbigquerytest`.`publications`
+  OPTIONS()
+  as SELECT * FROM `patents-public-data.google_patents_research.publications_201710` LIMIT 1000;
+
+
+[0m09:45:32.025243 [debug] [Thread-1 (]: finished collecting timing info
+[0m09:45:32.026085 [debug] [Thread-1 (]: Database Error in model publications (models/publications.sql)
+  Access Denied: Table patents-public-data:google_patents_research.publications_201710: User does not have permission to query table patents-public-data:google_patents_research.publications_201710, or perhaps it does not exist in location EU.
+  compiled SQL at target/run/project/models/publications.sql
+[0m09:45:32.026586 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9be86c74-1b71-46c7-b0ce-eea36260fada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90e3bb6a0>]}
+[0m09:45:32.027212 [error] [Thread-1 (]: 1 of 1 ERROR creating view model dbtbigquerytest.publications .................. [[31mERROR[0m in 0.93s]
+[0m09:45:32.028032 [debug] [Thread-1 (]: Finished running node model.project.publications
+[0m09:45:32.029455 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m09:45:32.029700 [info ] [MainThread]: 
+[0m09:45:32.029885 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.86 seconds (1.86s).
+[0m09:45:32.030080 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:45:32.030170 [debug] [MainThread]: Connection 'list_bt-pp-cus-c84f_dbtbigquerytest' was properly closed.
+[0m09:45:32.030250 [debug] [MainThread]: Connection 'model.project.publications' was properly closed.
+[0m09:45:32.035935 [info ] [MainThread]: 
+[0m09:45:32.036173 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:45:32.036362 [info ] [MainThread]: 
+[0m09:45:32.036518 [error] [MainThread]: [33mDatabase Error in model publications (models/publications.sql)[0m
+[0m09:45:32.036684 [error] [MainThread]:   Access Denied: Table patents-public-data:google_patents_research.publications_201710: User does not have permission to query table patents-public-data:google_patents_research.publications_201710, or perhaps it does not exist in location EU.
+[0m09:45:32.036841 [error] [MainThread]:   compiled SQL at target/run/project/models/publications.sql
+[0m09:45:32.037025 [info ] [MainThread]: 
+[0m09:45:32.037182 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:45:32.037464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f4507f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90f453b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd90e3cece0>]}
+[0m09:45:32.037671 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-09-02 09:45:35.544998 | 2e5d39fa-2853-4e80-87fb-dddb39c0de86 ==============================
+[0m09:45:35.545009 [info ] [MainThread]: Running with dbt=1.2.1
+[0m09:45:35.545253 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/app/dbt-bigquery/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/app/dbt-bigquery/dbt/project', 'compile': False, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m09:45:35.545342 [debug] [MainThread]: Tracking: tracking
+[0m09:45:35.546851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3b2f73c5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3b2f73c6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3b2f73c820>]}
+[0m09:45:35.571858 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:45:35.572014 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:45:35.576202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2e5d39fa-2853-4e80-87fb-dddb39c0de86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3b2f61c0d0>]}
+[0m09:45:35.577237 [debug] [MainThread]: Acquiring new bigquery connection "generate_catalog"
+[0m09:45:35.577341 [info ] [MainThread]: Building catalog
+[0m09:45:35.577615 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:45:36.040979 [debug] [ThreadPool]: Acquiring new bigquery connection "bt-pp-cus-c84f.information_schema"
+[0m09:45:36.053563 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:45:36.054521 [debug] [ThreadPool]: On bt-pp-cus-c84f.information_schema: /* {"app": "dbt", "dbt_version": "1.2.1", "profile_name": "bigquery", "target_name": "default", "connection_name": "bt-pp-cus-c84f.information_schema"} */
+
+    with tables as (
+        select
+            project_id as table_database,
+            dataset_id as table_schema,
+            table_id as original_table_name,
+
+            concat(project_id, '.', dataset_id, '.', table_id) as relation_id,
+
+            row_count,
+            size_bytes as size_bytes,
+            case
+                when type = 1 then 'table'
+                when type = 2 then 'view'
+                else 'external'
+            end as table_type,
+
+            REGEXP_CONTAINS(table_id, '^.+[0-9]{8}$') and coalesce(type, 0) = 1 as is_date_shard,
+            REGEXP_EXTRACT(table_id, '^(.+)[0-9]{8}$') as shard_base_name,
+            REGEXP_EXTRACT(table_id, '^.+([0-9]{8})$') as shard_name
+
+        from `bt-pp-cus-c84f`.`dbtbigquerytest`.__TABLES__
+        where (upper(dataset_id) = upper('dbtbigquerytest'))
+    ),
+
+    extracted as (
+
+        select *,
+            case
+                when is_date_shard then shard_base_name
+                else original_table_name
+            end as table_name
+
+        from tables
+
+    ),
+
+    unsharded_tables as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            coalesce(table_type, 'external') as table_type,
+            is_date_shard,
+
+            struct(
+                min(shard_name) as shard_min,
+                max(shard_name) as shard_max,
+                count(*) as shard_count
+            ) as table_shards,
+
+            sum(size_bytes) as size_bytes,
+            sum(row_count) as row_count,
+
+            max(relation_id) as relation_id
+
+        from extracted
+        group by 1,2,3,4,5
+
+    ),
+
+    info_schema_columns as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            table_catalog as table_database,
+            table_schema,
+            table_name,
+
+            -- use the "real" column name from the paths query below
+            column_name as base_column_name,
+            ordinal_position as column_index,
+
+            is_partitioning_column,
+            clustering_ordinal_position
+
+        from `bt-pp-cus-c84f`.`dbtbigquerytest`.INFORMATION_SCHEMA.COLUMNS
+        where ordinal_position is not null
+
+    ),
+
+    info_schema_column_paths as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            field_path as column_name,
+            data_type as column_type,
+            column_name as base_column_name,
+            description as column_comment
+
+        from `bt-pp-cus-c84f`.`dbtbigquerytest`.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS
+
+    ),
+
+    columns as (
+
+        select * except (base_column_name)
+        from info_schema_columns
+        join info_schema_column_paths using (relation_id, base_column_name)
+
+    ),
+
+    column_stats as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            max(relation_id) as relation_id,
+            max(case when is_partitioning_column = 'YES' then 1 else 0 end) = 1 as is_partitioned,
+            max(case when is_partitioning_column = 'YES' then column_name else null end) as partition_column,
+            max(case when clustering_ordinal_position is not null then 1 else 0 end) = 1 as is_clustered,
+            array_to_string(
+                array_agg(
+                    case
+                        when clustering_ordinal_position is not null then column_name
+                        else null
+                    end ignore nulls
+                    order by clustering_ordinal_position
+                ), ', '
+            ) as clustering_columns
+
+        from columns
+        group by 1,2,3
+
+    )
+
+    select
+        unsharded_tables.table_database,
+        unsharded_tables.table_schema,
+        case
+            when is_date_shard then concat(unsharded_tables.table_name, '*')
+            else unsharded_tables.table_name
+        end as table_name,
+        unsharded_tables.table_type,
+
+        -- coalesce name and type for External tables - these columns are not
+        -- present in the COLUMN_FIELD_PATHS resultset
+        coalesce(columns.column_name, '<unknown>') as column_name,
+        -- invent a row number to account for nested fields -- BQ does
+        -- not treat these nested properties as independent fields
+        row_number() over (
+            partition by relation_id
+            order by columns.column_index, columns.column_name
+        ) as column_index,
+        coalesce(columns.column_type, '<unknown>') as column_type,
+        columns.column_comment,
+
+        'Shard count' as `stats__date_shards__label`,
+        table_shards.shard_count as `stats__date_shards__value`,
+        'The number of date shards in this table' as `stats__date_shards__description`,
+        is_date_shard as `stats__date_shards__include`,
+
+        'Shard (min)' as `stats__date_shard_min__label`,
+        table_shards.shard_min as `stats__date_shard_min__value`,
+        'The first date shard in this table' as `stats__date_shard_min__description`,
+        is_date_shard as `stats__date_shard_min__include`,
+
+        'Shard (max)' as `stats__date_shard_max__label`,
+        table_shards.shard_max as `stats__date_shard_max__value`,
+        'The last date shard in this table' as `stats__date_shard_max__description`,
+        is_date_shard as `stats__date_shard_max__include`,
+
+        '# Rows' as `stats__num_rows__label`,
+        row_count as `stats__num_rows__value`,
+        'Approximate count of rows in this table' as `stats__num_rows__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_rows__include`,
+
+        'Approximate Size' as `stats__num_bytes__label`,
+        size_bytes as `stats__num_bytes__value`,
+        'Approximate size of table as reported by BigQuery' as `stats__num_bytes__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_bytes__include`,
+
+        'Partitioned By' as `stats__partitioning_type__label`,
+        partition_column as `stats__partitioning_type__value`,
+        'The partitioning column for this table' as `stats__partitioning_type__description`,
+        is_partitioned as `stats__partitioning_type__include`,
+
+        'Clustered By' as `stats__clustering_fields__label`,
+        clustering_columns as `stats__clustering_fields__value`,
+        'The clustering columns for this table' as `stats__clustering_fields__description`,
+        is_clustered as `stats__clustering_fields__include`
+
+    -- join using relation_id (an actual relation, not a shard prefix) to make
+    -- sure that column metadata is picked up through the join. This will only
+    -- return the column information for the "max" table in a date-sharded table set
+    from unsharded_tables
+    left join columns using (relation_id)
+    left join column_stats using (relation_id)
+  
+[0m09:45:38.568292 [info ] [MainThread]: Catalog written to /usr/app/dbt-bigquery/dbt/project/target/catalog.json
+[0m09:45:38.569013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3b2f73c5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3b2f676bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3b2f676bf0>]}
+[0m09:45:38.569453 [debug] [MainThread]: Flushing usage events
+[0m09:45:39.016437 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m09:45:39.016894 [debug] [MainThread]: Connection 'bt-pp-cus-c84f.information_schema' was properly closed.
