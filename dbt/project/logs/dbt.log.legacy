@@ -1,1 +1,2 @@
 2022-09-02 08:00:31.757036 (MainThread): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 59482), raddr=('142.251.209.138', 443)>
+2022-09-02 09:45:31.101810 (Thread-1 (worker)): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 57828), raddr=('142.250.181.202', 443)>
