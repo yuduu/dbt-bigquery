@@ -1,5 +1,5 @@
 bigquery:
-  target: bigquery
+  target: default
   outputs:
     default:
       type: bigquery
