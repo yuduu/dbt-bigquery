@@ -381,3 +381,120 @@ select * from final;
 [0m08:00:32.539635 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
 [0m08:00:32.539944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9289e2ff40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f928afb34c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9289edcd60>]}
 [0m08:00:32.540162 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-09-02 08:10:21.538650 | d2dcffbb-4434-4429-afd8-7d806a2d8bc9 ==============================
+[0m08:10:21.538660 [info ] [MainThread]: Running with dbt=1.2.1
+[0m08:10:21.538874 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/app/dbt-bigquery/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/app/dbt-bigquery/dbt/project', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:10:21.538962 [debug] [MainThread]: Tracking: tracking
+[0m08:10:21.540453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226afec5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226afec6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226afec790>]}
+[0m08:10:21.566508 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:10:21.566660 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:10:21.570986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd2dcffbb-4434-4429-afd8-7d806a2d8bc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226ae6bf40>]}
+[0m08:10:21.575919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd2dcffbb-4434-4429-afd8-7d806a2d8bc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226ae4c400>]}
+[0m08:10:21.576154 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 285 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m08:10:21.576336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd2dcffbb-4434-4429-afd8-7d806a2d8bc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226ae4c490>]}
+[0m08:10:21.577228 [info ] [MainThread]: 
+[0m08:10:21.577656 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:10:21.578377 [debug] [ThreadPool]: Acquiring new bigquery connection "list_bt-pp-cus-c84f"
+[0m08:10:21.578580 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:10:22.142327 [debug] [ThreadPool]: Acquiring new bigquery connection "list_bt-pp-cus-c84f_dbtbigquerytest"
+[0m08:10:22.143219 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:10:22.544400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd2dcffbb-4434-4429-afd8-7d806a2d8bc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226ae37be0>]}
+[0m08:10:22.545064 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m08:10:22.545395 [info ] [MainThread]: 
+[0m08:10:22.561001 [debug] [Thread-1 (]: Began running node model.project.customers
+[0m08:10:22.561234 [info ] [Thread-1 (]: 1 of 1 START view model dbtbigquerytest.customers .............................. [RUN]
+[0m08:10:22.561583 [debug] [Thread-1 (]: Acquiring new bigquery connection "model.project.customers"
+[0m08:10:22.561703 [debug] [Thread-1 (]: Began compiling node model.project.customers
+[0m08:10:22.561785 [debug] [Thread-1 (]: Compiling model.project.customers
+[0m08:10:22.563181 [debug] [Thread-1 (]: Writing injected SQL for node "model.project.customers"
+[0m08:10:22.563381 [debug] [Thread-1 (]: finished collecting timing info
+[0m08:10:22.563460 [debug] [Thread-1 (]: Began executing node model.project.customers
+[0m08:10:22.588450 [debug] [Thread-1 (]: Writing runtime SQL for node "model.project.customers"
+[0m08:10:22.588765 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:10:22.589652 [debug] [Thread-1 (]: On model.project.customers: /* {"app": "dbt", "dbt_version": "1.2.1", "profile_name": "bigquery", "target_name": "default", "node_id": "model.project.customers"} */
+
+
+  create or replace view `bt-pp-cus-c84f`.`dbtbigquerytest`.`customers`
+  OPTIONS()
+  as with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from `dbt-tutorial`.jaffle_shop.customers
+
+),
+
+orders as (
+
+    select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status
+
+    from `dbt-tutorial`.jaffle_shop.orders
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders
+
+    from orders
+
+    group by 1
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders
+
+    from customers
+
+    left join customer_orders using (customer_id)
+
+)
+
+select * from final;
+
+
+[0m08:10:23.334733 [debug] [Thread-1 (]: finished collecting timing info
+[0m08:10:23.335575 [debug] [Thread-1 (]: Database Error in model customers (models/customers.sql)
+  Access Denied: Table dbt-tutorial:jaffle_shop.customers: User does not have permission to query table dbt-tutorial:jaffle_shop.customers, or perhaps it does not exist in location EU.
+  compiled SQL at target/run/project/models/customers.sql
+[0m08:10:23.336191 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd2dcffbb-4434-4429-afd8-7d806a2d8bc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226acd9090>]}
+[0m08:10:23.336652 [error] [Thread-1 (]: 1 of 1 ERROR creating view model dbtbigquerytest.customers ..................... [[31mERROR[0m in 0.77s]
+[0m08:10:23.337033 [debug] [Thread-1 (]: Finished running node model.project.customers
+[0m08:10:23.338644 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:10:23.338993 [info ] [MainThread]: 
+[0m08:10:23.339267 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.76 seconds (1.76s).
+[0m08:10:23.339464 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:10:23.339579 [debug] [MainThread]: Connection 'list_bt-pp-cus-c84f_dbtbigquerytest' was properly closed.
+[0m08:10:23.339672 [debug] [MainThread]: Connection 'model.project.customers' was properly closed.
+[0m08:10:23.345782 [info ] [MainThread]: 
+[0m08:10:23.346449 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m08:10:23.346630 [info ] [MainThread]: 
+[0m08:10:23.346777 [error] [MainThread]: [33mDatabase Error in model customers (models/customers.sql)[0m
+[0m08:10:23.346943 [error] [MainThread]:   Access Denied: Table dbt-tutorial:jaffle_shop.customers: User does not have permission to query table dbt-tutorial:jaffle_shop.customers, or perhaps it does not exist in location EU.
+[0m08:10:23.347216 [error] [MainThread]:   compiled SQL at target/run/project/models/customers.sql
+[0m08:10:23.347431 [info ] [MainThread]: 
+[0m08:10:23.347674 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m08:10:23.347985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226ae379a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226ae68910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f226ac87be0>]}
+[0m08:10:23.348362 [debug] [MainThread]: Flushing usage events
