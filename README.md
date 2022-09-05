@@ -16,5 +16,6 @@ docker run \
     -e "DBT_DATASET=${DBT_DATASET}" \
     -e "DBT_PROJECT=${DBT_PROJECT}" \
     --rm \
-    yuduu/dbt-bigquery
+    yuduu/dbt-bigquery \
+    run
 ```
